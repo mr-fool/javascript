@@ -8,3 +8,17 @@ var removeDuplicates = function(nums) {
     return nums;
 };
 console.log(removeDuplicates([1,1,2]));
+//or
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let i = 0;
+    while (i < nums.length) {
+        if (nums[i++] == nums[i]) {
+            nums.splice(i--, 1)
+        }
+    }
+    
+};
